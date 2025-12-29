@@ -1,0 +1,18 @@
+import sqlite3
+def create_table():
+    conn=sqlite3.connect("college.db")
+    cur=conn.cursor()
+    cur.execute(""
+    CREATE TABLE IF NOT EXISTS student
+        id INTEGER PRIMARY KEY AUTOINCREMENT
+        name TEXT,
+        course TEXT
+    )
+        "")
+    conn.commmit()
+    conn.close()
+    def add_student():
+        name=input("Enter student namee:")
+        course=input("Enter course:")
+        conn=sqlite3.connect("college.db")
+        cur=conn.cursor()
